@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { FiSun, FiMoon, FiGithub, FiExternalLink, FiMail, FiSend, FiMenu, FiX } from "react-icons/fi";
+import { FaLinkedin, FaPhoneAlt } from "react-icons/fa";
 import { GraduationCap, Briefcase, Server, Code, Layers } from "lucide-react";
 import { SiMongodb, SiExpress, SiTailwindcss, SiTypescript, SiJsonwebtokens } from "react-icons/si";
 import { FaReact, FaNodeJs } from "react-icons/fa";
@@ -35,7 +36,13 @@ function App() {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${darkMode ? "bg-[#020617]/90 border-slate-800" : "bg-white/90 border-slate-200"
         } backdrop-blur-md`}>
         <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-          <img src={logo} alt="logo" className="w-28 md:w-32 h-auto hover:opacity-80 transition-opacity cursor-pointer" />
+          <a href="#home">
+            <img
+              src={logo}
+              alt="logo"
+              className="w-28 md:w-32 h-auto hover:opacity-80 transition-opacity cursor-pointer"
+            />
+          </a>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex gap-8 items-center font-medium">
@@ -297,27 +304,96 @@ function App() {
       {/* Contact Section */}
       <section id="contact" className="py-24 px-6 relative overflow-hidden">
         <div className="max-w-2xl mx-auto relative z-10 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">Let's <span className="text-cyan-500">Connect</span></h2>
-          <p className="mb-12 opacity-70">Have a project in mind or want to discuss a role?</p>
+
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
+            Let's <span className="text-cyan-500">Connect</span>
+          </h2>
+
+          <p className="mb-12 opacity-70">
+            Have a project in mind or want to discuss a role?
+          </p>
 
           <form action="https://formspree.io/f/xqeyewww" method="POST" className="space-y-4">
+
             <div className="grid md:grid-cols-2 gap-4">
-              <input name="name" required placeholder="Name" className={`w-full p-4 rounded-xl border outline-none transition-all ${darkMode ? "bg-slate-900 border-slate-800 focus:border-cyan-500" : "bg-white border-slate-200 focus:border-cyan-500 shadow-sm"
-                }`} />
-              <input type="email" name="email" required placeholder="Email" className={`w-full p-4 rounded-xl border outline-none transition-all ${darkMode ? "bg-slate-900 border-slate-800 focus:border-cyan-500" : "bg-white border-slate-200 focus:border-cyan-500 shadow-sm"
-                }`} />
+              <input
+                name="name"
+                required
+                placeholder="Name"
+                className={`w-full p-4 rounded-xl border outline-none transition-all ${darkMode
+                    ? "bg-slate-900 border-slate-800 focus:border-cyan-500"
+                    : "bg-white border-slate-200 focus:border-cyan-500 shadow-sm"
+                  }`}
+              />
+
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="Email"
+                className={`w-full p-4 rounded-xl border outline-none transition-all ${darkMode
+                    ? "bg-slate-900 border-slate-800 focus:border-cyan-500"
+                    : "bg-white border-slate-200 focus:border-cyan-500 shadow-sm"
+                  }`}
+              />
             </div>
-            <textarea name="message" required rows={5} placeholder="Your Message" className={`w-full p-4 rounded-xl border outline-none transition-all ${darkMode ? "bg-slate-900 border-slate-800 focus:border-cyan-500" : "bg-white border-slate-200 focus:border-cyan-500 shadow-sm"
-              }`} />
+
+            <textarea
+              name="message"
+              required
+              rows={5}
+              placeholder="Your Message"
+              className={`w-full p-4 rounded-xl border outline-none transition-all ${darkMode
+                  ? "bg-slate-900 border-slate-800 focus:border-cyan-500"
+                  : "bg-white border-slate-200 focus:border-cyan-500 shadow-sm"
+                }`}
+            />
+
             <button className="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20">
-              <FiSend /> Send Message
+              <FiSend />
+              Send Message
             </button>
+
           </form>
 
-          <div className="mt-12 flex justify-center gap-8 text-2xl opacity-60">
-            <a href="https://github.com/Rishana222" target="_blank" className="hover:text-cyan-500 transition-all hover:scale-110"><FiGithub /></a>
-            <a href="mailto:your-email@example.com" className="hover:text-cyan-500 transition-all hover:scale-110"><FiMail /></a>
+          {/* Social + Contact Icons */}
+          <div className="mt-12 flex justify-center items-center gap-8 text-2xl opacity-60 flex-wrap">
+
+            <a
+              href="https://github.com/Rishana222"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-cyan-500 transition-all hover:scale-110"
+            >
+              <FiGithub />
+            </a>
+
+            <a
+              href="mailto:your-email@example.com"
+              className="hover:text-cyan-500 transition-all hover:scale-110"
+            >
+              <FiMail />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/rishana-p-792604364/"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-cyan-500 transition-all hover:scale-110"
+            >
+              <FaLinkedin />
+            </a>
+
+            <a
+  href="tel:+916238482589"
+  className="flex items-center gap-2 text-lg hover:text-cyan-500 transition-all"
+>
+  <FaPhoneAlt />
+  <span className="text-base">+91 6238482589</span>
+</a>
+
           </div>
+
         </div>
       </section>
 
